@@ -20,7 +20,7 @@ public class Main {
         List<Autor> autores3 = List.of(autor3);
         List<Autor> autores4 = List.of(autor4);
         
-        // Creamos los libros de texto y las novelas 
+        // Creamos los libros de texto y las diferentes novelas 
         Libro libro1 = new Novela("El amor en los tiempos del colera", "978-0307389732", 28.99, 1985, autores1, "Romance");
         Libro libro2 = new LibroDeTexto("Harry Potter y la piedra filosofal", "978-0987654321", 35.50, 1997, autores2, "Secundaria");
         Libro libro3 = new Novela("Fundación", "978-0451524935", 40.00, 1951, autores3, "Ciencia ficción");
@@ -28,16 +28,16 @@ public class Main {
         Libro libro5 = new LibroDeTexto("El Príncipe", "978-0140449150", 30.00, 1532, autores4, "Ciencia Política");
         Libro libro6 = new LibroDeTexto("Discursos sobre la primera década de Tito Livio", "978-0199535699", 32.50, 1531, autores4, "Filosofía Política");
         
-        // Creamos los clientes
+        // Creamos los  diferentes clientes
         Cliente cliente1 = new Cliente("Omar Al-Farid", "SAU52689");
         Cliente cliente2 = new Cliente("Jean Dupont", "FR894518");
         Cliente cliente3 = new Cliente("Hans Müller", "DE867542");
         Cliente cliente4 = new Cliente("Carlos Rodríguez", "CO568917");
 
-        // Hacemos la creación de la librería
+        // Hacemos la creación de las librería
         Libreria libreria = new Libreria();
         
-        // Agregamos los líbros al catálogo
+        // Agregamos los diferentes líbros al catálogo
         libreria.agregarLibro(libro1);
         libreria.agregarLibro(libro2);
         libreria.agregarLibro(libro3);
@@ -45,7 +45,7 @@ public class Main {
         libreria.agregarLibro(libro5);
         libreria.agregarLibro(libro6);
         
-        // Hacemos la búsqueda de los libros
+        // Hacemos la búsqueda de los diferentes libros
         System.out.println("=== Búsqueda de libros ===");
         Libro libroEncontrado = libreria.buscarLibro("Fundación");
         if (libroEncontrado != null) {
@@ -54,14 +54,14 @@ public class Main {
             System.out.println("Libro no encontrado");
         }
         
-        // Hacemos la venta de los libros
+        // Hacemos la venta de los libros 
         System.out.println("\n=== Venta de libros ===");
         libreria.venderLibro(libro3, cliente1);
         libreria.venderLibro(libro5, cliente2);
         libreria.venderLibro(libro1, cliente3);
         libreria.venderLibro(libro4, cliente4);
         
-        // Mostramps los libros comprados 
+        // Mostramos los libros comprados 
         System.out.println("\n=== Libros comprados por clientes ===");
         mostrarCompras(cliente1);
         mostrarCompras(cliente2);
